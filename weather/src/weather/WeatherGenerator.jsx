@@ -7,7 +7,7 @@ const WeatherGenerator = () => {
 	const getWeather = useContext(Context);
 	const setWeather = getWeather.setWeather;
 	const country = getWeather.country;
-	const API = `http://api.weatherapi.com/v1/current.json?key=ce971f1350ae424f8e953048231905&q=${country}&aqi=no`
+	const API = `https://api.weatherapi.com/v1/current.json?key=ce971f1350ae424f8e953048231905&q=${country}&aqi=no`
 
 	const API_KEY = "ce971f1350ae424f8e953048231905"
 	useEffect(() => {

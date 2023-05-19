@@ -11,7 +11,6 @@ const WeatherGenerator = () => {
 
 	const API_KEY = "ce971f1350ae424f8e953048231905"
 	useEffect(() => {
-		if (country !== "") {
 			const fetchWeather = async () => {
 				try {
 					const response = await axios({
@@ -27,7 +26,6 @@ const WeatherGenerator = () => {
 				}
 			}
 			fetchWeather()
-		}
 	}, [API, setWeather, country])
 }
 

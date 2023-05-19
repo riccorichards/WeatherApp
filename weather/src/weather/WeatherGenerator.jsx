@@ -11,22 +11,24 @@ const WeatherGenerator = () => {
 
 	const API_KEY = "ce971f1350ae424f8e953048231905"
 	useEffect(() => {
-		const fetchWeather = async () => {
-			try {
-				const response = await axios({
-					method: "GET",
-					url: API,
-					headers: {
-						Authorization: `bearer ${API_KEY}`
-					}
-				})
-				setWeather(response.data)
-			} catch (e) {
-				console.log(e.message)
+		if (country !== "") {
+			const fetchWeather = async () => {
+				try {
+					const response = await axios({
+						method: "GET",
+						url: API,
+						headers: {
+							Authorization: `bearer ${API_KEY}`
+						}
+					})
+					setWeather(response.data)
+				} catch (e) {
+					console.log(e.message)
+				}
 			}
+			fetchWeather()
 		}
-		fetchWeather()
-	}, [API, setWeather])
+	}, [API, setWeather, country])
 }
 
 

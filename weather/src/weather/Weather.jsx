@@ -12,8 +12,9 @@ const Weather = () => {
 
 	const [weather, setWeather] = useState(null)
 	const [inputValue, setInputValue] = useState("")
-	const [country, setCountry] = useState(null)
+	const [country, setCountry] = useState("tbilisi")
 	const values = { weather, setWeather, inputValue, setInputValue, country, setCountry }
+
 	return (
 		<Context.Provider value={values}>
 			<WeatherGenerator />
